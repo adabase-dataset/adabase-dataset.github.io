@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ADABase - A multimodal cogntive load database using physiological, behavioral, subjective and performance based measurments.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="multimodal, public dataset, cognitive load, affective sensing, machine learning, autonomous driving, multiple tasks, human computer interface">
+  <meta name="author" content="Maximilian P. Oppelt">
+  <link rel="stylesheet" href="./static/css/bulma.min.css" />
+  <link rel="stylesheet" href="./static/css/sunburst.css" />
+  <script src="./static/js/prettify.js"></script>
+</head>
+<body>
+  <span>
+    <section class="section pt-1">
+      <div class="container">
+        <div class="mb-1 pb-1 columns is-multiline">
+          <div class="column is-12 is-6-desktop mx-auto has-text-centered">
+        <h2 class="mb-4 is-size-1 is-size-3-mobile has-text-weight-bold has-text-primary is-italic">ADABase Dataset</h2>
+            <p class="subtitle has-text-grey mb-1">
+              <b>A</b>utonomous <b>D</b>riving Cognitive Load <b>A</b>ssessment Database
+            </p>
+            <p class="is-italic has-text-grey mb-1">
+              multimodal, public dataset, cognitive load, affective sensing, machine learning, autonomous driving, multiple tasks, human computer interface
+            </p>
+          </div>
+        </div>
+        <div class="columns is-multiline">
+          <div class="column is-12 is-4-desktop">
+            <div class="mb-6 is-flex">
+              <span>
+<svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
+ <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
+</svg>
+                </span>
+              <div class="ml-3">
+                <h4 class="is-size-4 has-text-weight-bold mb-2">Physiological</h4>
+                <p class="has-text-grey">Electrocardiography, Electromyography, Photoplethysmogram, Respiration, Skin Temperature, Eye Tracking</p>
+              </div>
+            </div>
+            <div class="mb-6 is-flex">
+              <span>
+              <svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
+ <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
+</svg>
+              </span>
+              <div class="ml-3">
+                <h4 class="is-size-4 has-text-weight-bold mb-2">Behavioral</h4>
+                <p class="has-text-grey">Facial Action Coding System Action Units, Eye Tracking</p>
+              </div>
+            </div>
+            <div class="mb-6 is-flex">
+              <span>
+                <svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
+ <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
+</svg>
+              </span>
+              <div class="ml-3">
+                <h4 class="is-size-4 has-text-weight-bold mb-2">Subjective</h4>
+                <p class="has-text-grey">NASA TLX questionnaires, OCEAN personality traits.</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-4 is-block-desktop is-hidden-touch">
+            <img class="mx-auto mt-0-widescreen is-block image" src="./static/images/overview.svg"
+              alt=""></div>
+          <div class="column is-12 is-4-desktop">
+            <div class="mb-6 is-flex">
+              <span>
+            <svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
+ <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
+</svg>
+              </span>
+              <div class="ml-3">
+                <h4 class="is-size-4 has-text-weight-bold mb-2">Performance</h4>
+                <p class="has-text-grey">Hit Rate, False Positive Rate and Reaction Time</p>
+              </div>
+            </div>
+            <div class="mb-6 is-flex">
+              <span>
+            <svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
+ <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
+</svg>
+              </span>
+              <div class="ml-3">
+                <h4 class="is-size-4 has-text-weight-bold mb-2">Szenarios</h4>
+                <p class="has-text-grey">Well established physiological <i>n</i>-back test and novel application motivated <i>k</i>-drive test.</p>
+              </div>
+            </div>
+            <div class="mb-6 is-flex">
+              <span>
+            <svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
+ <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
+</svg>
+              </span>
+              <div class="ml-3">
+                <h4 class="is-size-4 has-text-weight-bold mb-2">Public</h4>
+                <p class="has-text-grey">Raw signal recordings (>2 hours each) of 30 subjects for academic purposes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section has-background-primary">
+      <div class="container">
+        <div class="is-vcentered columns is-multiline">
+          <div class="column is-6 is-6-desktop mb-4">
+            <h2 class="has-text-white mt-2 mb-3 is-size-1 is-size-3-mobile has-text-weight-bold">Easy Access</h2>
+              <pre class="prettyprint"><code class="language-python">import pandas as pd
+
+# Continuously recorded ECG during the nback test
+data = pd.read_hdf(subject_file, "SIGNALS", mode="r")
+data.loc[data["STUDY"] == 'nback', ["TS", "ECG_RAW"]].dropna()
+
+# Reaction time of subject for level 1, n-back test.
+data = pd.read_hdf(subject_file, "PERFORMANCE", mode="r")
+data.loc[
+    (data["PHASE"] == "nback") &
+    (data["LEVELS"] == 1), "VISUAL REACTION TIME"
+]
+
+# Accessing available values for each table
+pd.read_hdf(subject_file, "SIGNALS").columns</code></pre>
+            <p class="has-text-white">Open hierarchical data format v5 file format, readable with all common programming langauges, including python using pandas package.</p>
+          </div>
+          <div class="column is-5 ml-auto">
+            <div class="mx-auto box p-6 has-background-light has-text-centered">
+              <h4 class="is-size-5 mb-2 has-text-weight-bold">Request Access to Dataset</h4>
+              <p class="has-text-grey-dark mb-4">Contact the authors and request access after accepting our End User License Agreement (EULA).</p>
+              <form action="#">
+                <a class="button is-primary is-fullwidth" href = 'mailto:adabase@iis.fraunhofer.de?body="Dear ADABase Team, I [enter name and academic institution] request access."&subject="ADABase EULA"'>Send Mail</a>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Citation & Funding & Legal-->
+    <section class="section pb-1">
+      <div class="container">
+        <div class="mb-3 pb-3 is-multiline">
+          <div class="mb-1 ml-1 pb-1 columns is-multiline">
+            <h4 class="is-size-4 has-text-weight-bold mb-1">Abstract and Screenshots</h4>
+          </div>
+          <div class="has-text-grey mb-3">
+Driver monitoring systems play an important role in lower to mid-level autonomous vehicles. Our work focuses on the detection of cognitive load as a component of driver-state estimation to improve traffic safety. By inducing single and dual-task workloads of increasing intensity on 51 subjects, while continuously measuring signals from multiple modalities, based on physiological measurements such as ECG, EDA, EMG, PPG, respiration rate, skin temperature and eye tracker data, as well as behavioral measurements such as action units extracted from facial videos, performance metrics like reaction time and subjective feedback using questionnaires, we create <strong>ADABase</strong> (<strong>A</strong>utonomous <strong>D</strong>riving Cognitive Load <strong>A</strong>ssessment Data<strong>base</strong>) <a href="https://www.mdpi.com/1424-8220/23/1/340">More... </a>
+          </div>
+          <div class="has-text-grey mb-3">
+            <img class="mx-auto mt-1-widescreen image" src="./static/images/setup.png", width="550">
+          </div>
+          <div class="has-text-grey mb-2">
+            <img class="mx-auto mt-1-widescreen image" src="./static/images/drive.png", width="500">
+          </div>
+          <div class="has-text-grey mb-2">
+            <img class="mx-auto mt-1-widescreen is-block image" src="./static/images/nback.png", width="600">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="mb-3 pb-3 is-multiline">
+          <div class="mb-1 ml-1 pb-1 columns is-multiline">
+            <h4 class="is-size-4 has-text-weight-bold mb-1">Cite our work: BibTex</h4>
+          </div>
+          <pre><code language="language-bibtex">  @article{oppeltADABaseMultimodalDataset2022,
+    author = {Oppelt, Maximilian P.; Foltyn, Andreas; Deuschel, Jessica; Lang, Nadine; Holzer, Nina; Eskofier, Bjoern M.; Yang, Seung Hee},
+    title = {{{ADABase}}: {{A Multimodal Dataset}} for {{Cognitive Load Estimation}}},
+    date = {2022-12-28},
+    journaltitle = {Sensors},
+    volume = {23},
+    number = {1},
+    pages = {340},
+    issn = {1424-8220},
+    doi = {10.3390/s23010340},
+    url = {https://www.mdpi.com/1424-8220/23/1/340},
+  }</code></pre>
+        </div>
+      </div>
+      <div class="container">
+        <div class="mb-3 pb-3 is-multiline">
+          <div class="mb-1 ml-1 pb-1 columns is-multiline">
+            <h4 class="is-size-4 has-text-weight-bold mb-1">Funding</h4>
+          </div>
+          <div class="has-text-grey mb-1">
+<p>This work was supported by the Bavarian Ministry of Economic Affairs, Regional Development and Energy through the Center for Analytics-Data-Applications (<a href="https://www.scs.fraunhofer.de/en/focus-projects/ada-center.html">ADA-Center</a>) within the framework of “BAYERN DIGITAL II” (20-3410-2-9-8).
+The hardware infrastructure is partly funded by the Federal Ministry of Education and Research under the project reference numbers 16FMD01K, 16FMD02 and 16FMD03.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="mb-3 pb-3 is-multiline">
+          <div class="mb-1 ml-1 pb-1 columns is-multiline">
+            <h4 class="is-size-4 has-text-weight-bold mb-1">Legal</h4>
+          </div>
+          <div class="has-text-grey mb-1">
+<p>The USER is able to access ADABase after signing our End Users License Agreement (EULA), that can be requested by mail using <strong class="is-italic ">adabase (at) iis.fraunhofer.de</strong>. The USER, he or she who will make use of the DATABASE, agrees to all terms of the EULA, including but not limited to: only academic usage, no military application no development of governmental system used in public space, responsible data handling and no further distribution of data. If parties are interested in acquiring the dataset for commercial usage or undisclosed parts of the dataset, do not hesitate to contact us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="section">
+      <div class="container">
+        <div class="columns is-mobile">
+            <div class="column"></div>
+            <div class="column"><img class="image" src="./static/images/ada.svg"></div>
+            <div class="column"><img class="image" src="./static/images/iis.svg"></div>
+            <div class="column"><img class="image" src="./static/images/mad.svg"></div>
+            <div class="column"></div>
+        </div>
+      </div><br>
+      <div class="pt-5" style="border-top: 1px solid #dee2e6;"></div>
+      <div class="container">
+        <div class="is-flex-tablet is-justify-content-between is-align-items-center">
+            <p>All rights reserved © ADABase 2023, Page based on bulma, released under the MIT license. Author: Maximilian P. Oppelt</p><br><br>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
