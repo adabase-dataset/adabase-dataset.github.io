@@ -8,9 +8,12 @@
   <meta name="author" content="Maximilian P. Oppelt">
   <link rel="stylesheet" href="./static/css/bulma.min.css" />
   <link rel="stylesheet" href="./static/css/sunburst.css" />
-  <script src="./static/js/prettify.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./static/css/prettify.css">
+  <script type="text/javascript" src="./static/js/prettify.js"></script>
+
 </head>
-<body>
+<body onload="PR.prettyPrint()">
   <span>
     <section class="section pt-1">
       <div class="container">
@@ -114,7 +117,7 @@
         <div class="is-vcentered columns is-multiline">
           <div class="column is-6 is-6-desktop mb-4">
             <h2 class="has-text-white mt-2 mb-3 is-size-1 is-size-3-mobile has-text-weight-bold">Fast & Easy Access</h2>
-              <pre class="prettyprint"><code class="language-python">import pandas as pd
+              <pre class="prettyprint" style="padding: 10px"><code class="language-python">import pandas as pd
 
 # Continuously recorded ECG during the nback test
 data = pd.read_hdf(subject_file, "SIGNALS", mode="r")
