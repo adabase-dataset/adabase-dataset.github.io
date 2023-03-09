@@ -121,13 +121,13 @@
 
 # Continuously recorded ECG during the nback test
 data = pd.read_hdf(subject_file, "SIGNALS", mode="r")
-data.loc[data["STUDY"] == 'nback', ["TS", "ECG_RAW"]].dropna()
+data.loc[data["STUDY"] == 'nback', ["TS", "ECG_RAW_II"]].dropna()
 
 # Reaction time of subject for level 1, n-back test.
 data = pd.read_hdf(subject_file, "PERFORMANCE", mode="r")
 data.loc[
     (data["PHASE"] == "nback") &
-    (data["LEVELS"] == 1), "VISUAL REACTION TIME"
+    (data["LEVEL"] == 1), "VISUAL REACTION TIME"
 ]
 
 # Accessing available values for each table
