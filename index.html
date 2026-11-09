@@ -1,246 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>ADABase - A multimodal cognitive load database using physiological, behavioral, subjective and performance based measurements.</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="multimodal, public dataset, cognitive load, affective sensing, machine learning, autonomous driving, multiple tasks, human computer interface">
-  <meta name="author" content="Maximilian P. Oppelt">
-  <link rel="stylesheet" href="./static/css/bulma.min.css" />
-  <link rel="stylesheet" href="./static/css/sunburst.css" />
-
-  <link rel="stylesheet" type="text/css" href="./static/css/prettify.css">
-  <script type="text/javascript" src="./static/js/prettify.js"></script>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ADABase — A Multimodal Dataset for Cognitive Load Estimation</title>
+<meta name="description" content="ADABase: 51 subjects, 135 h of synchronized physiological, behavioral, subjective and performance measurements under n-back and simulated-driving workload. Available on Zenodo for academic research.">
+<link rel="stylesheet" href="static/css/style.css">
 </head>
-<body onload="PR.prettyPrint()">
-  <span>
-    <section class="section pt-1">
-      <div class="container">
-        <div class="mb-1 pb-1 columns is-multiline">
-          <div class="column is-12 is-6-desktop mx-auto has-text-centered">
-        <h2 class="mb-4 is-size-1 is-size-3-mobile has-text-weight-bold has-text-primary is-italic">ADABase Dataset</h2>
-            <p class="subtitle has-text-grey mb-1">
-              <b>A</b>utonomous <b>D</b>riving Cognitive Load <b>A</b>ssessment Database
-            </p>
-            <p class="is-italic has-text-grey mb-1">
-              multimodal, public dataset, cognitive load, affective sensing, machine learning, autonomous driving, multiple tasks, human computer interface
-            </p>
-          </div>
-        </div>
-        <div class="columns is-multiline">
-          <div class="column is-12 is-4-desktop">
-            <div class="mb-6 is-flex">
-              <span>
-<svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
- <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
- <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
-</svg>
-                </span>
-              <div class="ml-3">
-                <h4 class="is-size-4 has-text-weight-bold mb-2">Physiological</h4>
-                <p class="has-text-grey">Electrocardiography, Electromyography, Photoplethysmogram, Respiration, Skin Temperature, Eye Tracking</p>
-              </div>
-            </div>
-            <div class="mb-6 is-flex">
-              <span>
-              <svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
- <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
- <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
-</svg>
-              </span>
-              <div class="ml-3">
-                <h4 class="is-size-4 has-text-weight-bold mb-2">Behavioral</h4>
-                <p class="has-text-grey">Facial Action Coding System Action Units, Eye Tracking</p>
-              </div>
-            </div>
-            <div class="mb-6 is-flex">
-              <span>
-                <svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
- <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
- <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
-</svg>
-              </span>
-              <div class="ml-3">
-                <h4 class="is-size-4 has-text-weight-bold mb-2">Subjective</h4>
-                <p class="has-text-grey">NASA TLX questionnaires, OCEAN personality traits.</p>
-              </div>
-            </div>
-          </div>
-          <div class="column is-4 is-block-desktop is-hidden-touch">
-            <img class="mx-auto mt-0-widescreen is-block image" src="./static/images/overview.svg"
-              alt=""></div>
-          <div class="column is-12 is-4-desktop">
-            <div class="mb-6 is-flex">
-              <span>
-            <svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
- <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
- <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
-</svg>
-              </span>
-              <div class="ml-3">
-                <h4 class="is-size-4 has-text-weight-bold mb-2">Performance</h4>
-                <p class="has-text-grey">Hit Rate, False Positive Rate and Reaction Time</p>
-              </div>
-            </div>
-            <div class="mb-6 is-flex">
-              <span>
-            <svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
- <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
- <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
-</svg>
-              </span>
-              <div class="ml-3">
-                <h4 class="is-size-4 has-text-weight-bold mb-2">Scenarios</h4>
-                <p class="has-text-grey">Well established physiological <i>n</i>-back test and novel application motivated <i>k</i>-drive test.</p>
-              </div>
-            </div>
-            <div class="mb-6 is-flex">
-              <span>
-            <svg width="48" height="48" fill="none" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
- <path d="m24.5 15c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-0.8 3.3c-0.4-0.4-1-0.4-1.4 0l-2.8 2.8-2.8-2.8c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8-2.8 2.8c-0.4 0.4-0.4 1 0 1.4s1 0.4 1.4 0l2.8-2.8 2.8 2.8c0.4 0.4 1 0.4 1.4 0s0.4-1 0-1.4l-2.8-2.8 2.8-2.8c0.4-0.4 0.4-1 0-1.4zm9.3-0.3h-7c-0.6 0-1 0.4-1 1v7c0 0.6 0.4 1 1 1h7c0.6 0 1-0.4 1-1v-7c0-0.6-0.4-1-1-1zm-1 7h-5v-5h5z" fill="#179c7d" style="mix-blend-mode:normal"/>
- <circle cx="24" cy="24" r="23.5" stroke="#179c7d" style="mix-blend-mode:normal"/>
-</svg>
-              </span>
-              <div class="ml-3">
-                <h4 class="is-size-4 has-text-weight-bold mb-2">Public</h4>
-                <p class="has-text-grey">Raw signal recordings (>2 hours each) of 30 subjects for academic purposes.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<body>
+<div class="page">
 
-    <section class="section pt-1 pb-1 has-background-primary">
-      <div class="container">
-        <div class="is-vcentered columns is-multiline">
-          <div class="column is-6 is-6-desktop mb-4">
-            <h2 class="has-text-white mt-2 mb-3 is-size-1 is-size-3-mobile has-text-weight-bold">Fast & Easy Access</h2>
-              <pre class="prettyprint" style="padding: 10px"><code class="language-python">import pandas as pd
-
-# Continuously recorded ECG during the nback test
-data = pd.read_hdf(subject_file, "SIGNALS", mode="r")
-data.loc[data["STUDY"] == 'nback', ["TS", "ECG_RAW_II"]].dropna()
-
-# Reaction time of subject for level 1, n-back test.
-data = pd.read_hdf(subject_file, "PERFORMANCE", mode="r")
-data.loc[
-    (data["PHASE"] == "nback") &
-    (data["LEVEL"] == 1), "VISUAL REACTION TIME"
-]
-
-# Accessing available values for each table
-pd.read_hdf(subject_file, "SIGNALS").columns</code></pre>
-            <p class="has-text-white">Open hierarchical data format v5, readable with all common programming languages, including python using pandas package.</p>
-          </div>
-          <div class="column is-5 ml-auto">
-            <div class="mx-auto box mb-4 p-6 has-background-light has-text-centered">
-              <h4 class="is-size-5 mb-2 has-text-weight-bold">Request Access to Dataset</h4>
-              <p class="has-text-grey-dark mb-4">Contact the authors and request access after accepting our End User License Agreement (EULA).</p>
-              <form action="#">
-                <a class="button is-primary is-fullwidth" href = 'mailto:adabase@iis.fraunhofer.de?body="Dear ADABase Team, I [enter name and academic institution] request access."&subject="ADABase EULA"'>Send Mail</a>
-
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<!-- Citation & Funding & Legal-->
-    <section class="section pb-1">
-      <div class="container">
-        <div class="mb-3 pb-3 is-multiline">
-          <div class="mb-1 ml-1 pb-1 columns is-multiline">
-            <h4 class="is-size-4 has-text-weight-bold mb-1">Abstract and Screenshots</h4>
-          </div>
-          <div class="has-text-grey mb-3">
-Driver monitoring systems play an important role in lower to mid-level autonomous vehicles. Our work focuses on the detection of cognitive load as a component of driver-state estimation to improve traffic safety. By inducing single and dual-task workloads of increasing intensity on 51 subjects, while continuously measuring signals from multiple modalities, based on physiological measurements such as ECG, EDA, EMG, PPG, respiration rate, skin temperature and eye tracker data, as well as behavioral measurements such as action units extracted from facial videos, performance metrics like reaction time and subjective feedback using questionnaires, we create <strong>ADABase</strong> (<strong>A</strong>utonomous <strong>D</strong>riving Cognitive Load <strong>A</strong>ssessment Data<strong>base</strong>) <a href="https://www.mdpi.com/1424-8220/23/1/340">More... </a>
-          </div>
-          <div class="has-text-grey mb-3">
-            <img class="mx-auto mt-1-widescreen image" src="./static/images/setup.png", width="550">
-          </div>
-          <div class="has-text-grey mb-2">
-            <img class="mx-auto mt-1-widescreen image" src="./static/images/drive.png", width="500">
-          </div>
-          <div class="has-text-grey mb-2">
-            <img class="mx-auto mt-1-widescreen is-block image" src="./static/images/nback.png", width="600">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="mb-3 pb-3 is-multiline">
-          <div class="mb-1 ml-1 pb-1 columns is-multiline">
-            <h4 class="is-size-4 has-text-weight-bold mb-1">Cite our work: BibTex</h4>
-          </div>
-          <pre><code language="language-bibtex">  @article{oppeltADABaseMultimodalDataset2022,
-    author = {Oppelt, Maximilian P. and Foltyn, Andreas and Deuschel, Jessica and Lang, Nadine R. and Holzer, Nina and Eskofier, Bjoern M. and Yang, Seung Hee},
-    title = {{{ADABase}}: {{A Multimodal Dataset}} for {{Cognitive Load Estimation}}},
-    date = {2022-12-28},
-    journaltitle = {Sensors},
-    volume = {23},
-    number = {1},
-    pages = {340},
-    issn = {1424-8220},
-    doi = {10.3390/s23010340},
-    url = {https://www.mdpi.com/1424-8220/23/1/340},
-  }
-  @article{foltynEvaluatingRobustnessMultimodal2024,
-    title = {Evaluating the Robustness of Multimodal Task Load Estimation Models},
-    author = {Foltyn, Andreas and Deuschel, Jessica and {Lang-Richter}, Nadine R. and Holzer, Nina and Oppelt, Maximilian P.},
-    date = {2024-04-10},
-    journal = {Frontiers in Computer Science},
-    volume = {6},
-    pages = {1371181},
-    issn = {2095-2236},
-    doi = {10.3389/fcomp.2024.1371181},
-    url = {https://www.frontiersin.org/articles/10.3389/fcomp.2024.1371181}
-  }</code></pre>
-        </div>
-      </div>
-      <div class="container">
-        <div class="mb-3 pb-3 is-multiline">
-          <div class="mb-1 ml-1 pb-1 columns is-multiline">
-            <h4 class="is-size-4 has-text-weight-bold mb-1">Funding</h4>
-          </div>
-          <div class="has-text-grey mb-1">
-<p>This work was supported by the Bavarian Ministry of Economic Affairs, Regional Development and Energy through the Center for Analytics-Data-Applications (<a href="https://www.scs.fraunhofer.de/en/focus-projects/ada-center.html">ADA-Center</a>) within the framework of “BAYERN DIGITAL II” (20-3410-2-9-8).
-The hardware infrastructure is partly funded by the Federal Ministry of Education and Research under the project reference numbers 16FMD01K, 16FMD02 and 16FMD03.</p>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="mb-3 pb-3 is-multiline">
-          <div class="mb-1 ml-1 pb-1 columns is-multiline">
-            <h4 class="is-size-4 has-text-weight-bold mb-1">Legal</h4>
-          </div>
-          <div class="has-text-grey mb-1">
-<p>The USER is able to access ADABase after signing our End Users License Agreement (EULA), that can be requested by mail using <strong class="is-italic ">adabase (at) iis.fraunhofer.de</strong>. The USER may not use the DATABASE for any nonacademic purpose. According to paragraph 44b section 3 UrhG (German Copyright Act) text and data mining for commercial purposes is prohibited. Nonacademic purposes include, but are not limited to: proving the efficiency of commercial systems, training or testing of commercial systems, selling data from the dataset, creating military applications, developing governmental systems used in public spaces. If parties are interested in acquiring the dataset for commercial usage or undisclosed parts of the dataset, do not hesitate to contact us.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<!-- Footer -->
-    <footer class="section">
-      <div class="container">
-        <div class="columns is-mobile">
-            <div class="column"></div>
-            <div class="column"><img class="image" src="./static/images/ada.svg"></div>
-            <div class="column"><img class="image" src="./static/images/iis.svg"></div>
-            <div class="column"><img class="image" src="./static/images/mad.svg"></div>
-            <div class="column"></div>
-        </div>
-      </div><br>
-      <div class="pt-5" style="border-top: 1px solid #dee2e6;"></div>
-      <div class="container">
-        <div class="is-flex-tablet is-justify-content-between is-align-items-center">
-            <p>All rights reserved © ADABase 2023, Page based on bulma, released under the MIT license. Author: Maximilian P. Oppelt</p><br><br>
-        </div>
-      </div>
-    </footer>
+<nav class="nav">
+  <div class="nav-brand">ADA<span class="accent">Base</span></div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#access">Access</a>
+    <a href="#docs">Documentation</a>
+    <a href="https://raw.githubusercontent.com/adabase-dataset/adabase-dataset.github.io/main/LICENSE.md">License</a>
+    <a href="#cite">Cite</a>
   </div>
-</body>
+  <div class="crosslink">
+    <span class="on">ADABase</span>
+    <a href="https://revelio-dataset.github.io">REVELIO &rarr;</a>
+  </div>
+</nav>
 
+<header class="hero">
+  <div class="eyebrow">Multimodal cognitive-load dataset</div>
+  <h1>ADABase</h1>
+  <p class="lede">51 subjects &middot; 135 h of synchronized performance ratings, self-subjective questionnaires, physiological and behavioral signals recorded under n-back and simulated-driving workload.</p>
+  <p class="hero-meta">Department Digital Health and Analytics, Fraunhofer IIS, Fraunhofer Institute for Integrated Circuits IIS &middot; Department Artificial Intelligence in Biomedical Engineering, Friedrich-Alexander-University Erlangen Nuremberg</p>
+  <div class="btns">
+    <a class="btn btn-primary" href="#access">Request access</a>
+    <a class="btn" href="https://doi.org/10.3390/s23010340">Read paper 2023</a>
+    <a class="btn" href="#docs">Documentation notebook</a>
+    <a class="btn" href="#cite">BibTeX</a>
+  </div>
+</header>
+
+<div class="section-head"><div class="section-label">Dataset at a glance</div></div>
+<section class="spec">
+  <div class="spec-cell"><div class="k">Subjects</div><div class="v">51 <small>(30 public)</small></div></div>
+  <div class="spec-cell"><div class="k">Recording</div><div class="v">135 h</div></div>
+  <div class="spec-cell"><div class="k">Modalities</div><div class="v">7 signals</div></div>
+  <div class="spec-cell"><div class="k">Format</div><div class="v">HDF5</div></div>
+  <div class="spec-cell"><div class="k">Biosignals</div><div class="v sm">ECG, EDA, EMG, PPG, RSP, SKT &middot; stored at 1&nbsp;kHz</div></div>
+  <div class="spec-cell"><div class="k">Eye / Video</div><div class="v sm">Gaze &amp; pupil (250&nbsp;Hz), facial AUs &amp; body landmarks (no raw video)</div></div>
+  <div class="spec-cell"><div class="k">Labels</div><div class="v sm">NASA-TLX, performance</div></div>
+  <div class="spec-cell"><div class="k">License</div><div class="v sm"><a href="https://raw.githubusercontent.com/adabase-dataset/adabase-dataset.github.io/main/LICENSE.md">Academic-only EULA</a></div></div>
+</section>
+
+<section class="overview" id="overview">
+  <div>
+    <div class="section-label">Overview</div>
+    <h2>Two workload paradigms</h2>
+    <p>The established <em>n-back</em> test and a novel simulator-based <em>k-drive</em> task induce single- and dual-task load of increasing intensity, captured on a common analog clock alongside gaze, facial action units and driving performance.</p>
+    <p style="margin-top:14px">ADABase is continued by <a href="https://revelio-dataset.github.io">REVELIO</a>, a gaming cohort recorded with the same setup. Together they comprise 96 sessions from 83 unique participants.</p>
+  </div>
+  <div class="fig-grid">
+    <div class="fig"><img src="static/images/001.jpg" alt="Physiological signals"></div>
+    <div class="fig"><img src="static/images/002.jpg" alt="Eye-tracking &amp; gaze"></div>
+    <div class="fig"><img src="static/images/003.jpg" alt="Recording room"></div>
+    <div class="fig"><img src="static/images/004.jpg" alt="Driving simulator"></div>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <div class="section-label">Access &middot; academic use only</div>
+  <h2>Request the dataset</h2>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><div class="t">Check eligibility</div><div class="d">Permanent position at an academic institution, institutional email address, non-commercial academic research only.</div></div>
+    <div class="step"><div class="n">02</div><div class="t">Request on Zenodo</div><div class="d">Use <strong>Request access</strong> on the Zenodo record. State name, position, affiliation, postal address, institutional email, up to five co-researchers and the intended research use.</div></div>
+    <div class="step"><div class="n">03</div><div class="t">Accept the EULA</div><div class="d">Submitting the request accepts the <a href="https://raw.githubusercontent.com/adabase-dataset/adabase-dataset.github.io/main/LICENSE.md">End User License Agreement</a>. Access is granted once the request has been reviewed.</div></div>
+  </div>
+  <div class="access-actions">
+    <a class="contact" href="https://doi.org/10.5281/zenodo.24051552">ADABase Public Set on Zenodo</a>
+    <a class="btn" href="https://doi.org/10.5281/zenodo.24060698">REVELIO Public Set on Zenodo</a>
+    <a class="btn" href="https://raw.githubusercontent.com/adabase-dataset/adabase-dataset.github.io/main/LICENSE.md">Read the EULA</a>
+  </div>
+  <p class="access-note">The <strong>Public Set</strong> holds recordings 0000&ndash;0029; the <strong>Private Set</strong> (0030&ndash;0050) is retained as a hidden test set for benchmarking. Access is free of charge. Questions and commercial inquiries: <a href="mailto:adabase@iis.fraunhofer.de">adabase@iis.fraunhofer.de</a></p>
+</section>
+
+<section class="docs" id="docs">
+  <div>
+    <div class="section-label">Documentation</div>
+    <h2>Loading the public sets</h2>
+    <p>A Jupyter notebook walks through the ADABase and REVELIO public sets end to end, from the HDF5 layout to model-ready windows with a subject-wise split. Driving and gaming files share one layout, so the same code reads both.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="docs/cognitive-load-dataset-documentation.html">View in browser</a>
+      <a class="btn" href="https://github.com/adabase-dataset/adabase-dataset.github.io/blob/main/docs/cognitive-load-dataset-documentation.ipynb">Notebook (.ipynb) on GitHub</a>
+    </div>
+  </div>
+  <ol class="doc-topics">
+    <li><span class="n">01</span><span>Files, tables and channels: <code>SIGNALS</code>, <code>SUBJECTIVE</code>, <code>PERFORMANCE</code>, <code>META</code></span></li>
+    <li><span class="n">02</span><span>Participants and protocol, annotation by <code>STUDY</code>, <code>PHASE</code>, <code>LEVEL</code></span></li>
+    <li><span class="n">03</span><span>NASA-TLX ratings and task performance per level</span></li>
+    <li><span class="n">04</span><span>Biosignals, downsampling to 100&nbsp;Hz and normalization</span></li>
+    <li><span class="n">05</span><span>Window selection and building the dataset</span></li>
+    <li><span class="n">06</span><span>Suggested subject-wise split of the public sets</span></li>
+  </ol>
+</section>
+
+<section class="cite" id="cite" style="padding-top:40px">
+  <div class="section-label">Cite</div><br>
+  <h2>Cite this dataset</h2>
+  <p>Please cite the Zenodo records you use <strong>and both papers</strong>: ADABase introduced the acquisition setup, and REVELIO extends it with the gaming cohort.</p>
+  <p class="ref">Oppelt, M.P.; Foltyn, A.; Deuschel, J.; Lang, N.R.; Holzer, N.; Eskofier, B.M.; Yang, S.H. ADABase: A Multimodal Dataset for Cognitive Load Estimation. <em>Sensors</em> <strong>2023</strong>, <em>23</em>(1), 340. <a class="doi" href="https://doi.org/10.3390/s23010340">doi:10.3390/s23010340</a></p>
+  <p class="ref">Oppelt, M.P.; Foltyn, A.; Lang-Richter, N.R.; Eskofier, B.M. REVELIO: Multimodal Task Load Estimation for Cross-Domain Generalization. <em>International Journal of Human&ndash;Computer Interaction</em> <strong>2026</strong>, in press. Preprint: <a class="doi" href="https://doi.org/10.48550/arXiv.2509.01642">doi:10.48550/arXiv.2509.01642</a></p>
+  <div class="bibtex">
+    <div class="bibtex-head"><span class="lbl">BIBTEX</span><button class="copy-btn" type="button">Copy</button></div>
+    <pre>@article{oppelt2023adabase,
+  author  = {Oppelt, Maximilian P. and Foltyn, Andreas and Deuschel, Jessica
+             and Lang, Nadine R. and Holzer, Nina and Eskofier, Bjoern M.
+             and Yang, Seung Hee},
+  title   = {{ADABase}: A Multimodal Dataset for Cognitive Load Estimation},
+  journal = {Sensors},
+  year    = {2023},
+  volume  = {23},
+  number  = {1},
+  pages   = {340},
+  doi     = {10.3390/s23010340}
+}
+
+@article{oppelt2026revelio,
+  author    = {Oppelt, Maximilian P. and Foltyn, Andreas
+               and Lang-Richter, Nadine R. and Eskofier, Bjoern M.},
+  title     = {{REVELIO}: Multimodal Task Load Estimation
+               for Cross-Domain Generalization},
+  journal   = {International Journal of Human--Computer Interaction},
+  publisher = {Taylor \&amp; Francis},
+  year      = {2026},
+  doi       = {10.48550/arXiv.2509.01642},
+  note      = {In press. DOI refers to the arXiv preprint arXiv:2509.01642}
+}</pre>
+  </div>
+</section>
+
+<section class="versions" id="records">
+  <div class="section-label" style="margin-bottom:18px">Zenodo records &amp; identifiers</div>
+  <div class="records-wrap">
+    <table class="records">
+      <thead><tr><th>Record</th><th style="text-align:right">Sessions</th><th>DOI</th></tr></thead>
+      <tbody>
+        <tr><td>ADABase: Cognitive Driving Public Set<span class="tag">this dataset</span></td><td class="num">30</td><td><a href="https://doi.org/10.5281/zenodo.24051552">10.5281/zenodo.24051552</a></td></tr>
+        <tr><td>REVELIO: Cognitive Gaming Public Set</td><td class="num">30</td><td><a href="https://doi.org/10.5281/zenodo.24060698">10.5281/zenodo.24060698</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="chips">
+    <a class="chip" href="https://doi.org/10.3390/s23010340">Paper DOI: 10.3390/s23010340</a>
+    <a class="chip" href="https://doi.org/10.48550/arXiv.2509.01642">REVELIO preprint: arXiv:2509.01642</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <img src="static/images/ada.svg" alt="ADA Center">
+  <img src="static/images/iis.svg" alt="Fraunhofer IIS">
+  <img src="static/images/mad.svg" alt="MaD Lab FAU">
+  <a class="legal-link" href="https://raw.githubusercontent.com/adabase-dataset/adabase-dataset.github.io/main/LICENSE.md">License (EULA)</a>
+  <a class="legal-link" href="impressum.html">Legal Notice / Impressum</a>
+  <span class="copy">&copy; ADABase 2023&ndash;2026</span>
+</footer>
+
+</div>
+<script src="static/js/main.js"></script>
+</body>
 </html>
